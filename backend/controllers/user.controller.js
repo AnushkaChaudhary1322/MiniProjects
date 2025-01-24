@@ -93,3 +93,26 @@ export const logout = async (_, res) => {
         console.log(error);
     }
 }
+
+export const getProfile = async(req, res) => {
+    try {
+        const userId = req.params.id;
+        let user = await User.findById(userId);
+        return res.status(200).json({
+            user,
+            success:true
+        });
+    }
+    catch (error) {
+        console.log(error);
+    }
+};
+
+export const editProfile = async (req, res) => {
+    try{
+        const 
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
